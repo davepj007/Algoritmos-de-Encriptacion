@@ -4,6 +4,7 @@
 
 #include "Algoritmos/Cesar.h"
 #include "Algoritmos/Vigenere.h"
+#include "Algoritmos/Feistel.h"
 
 #include <stdlib.h>
 #include <iostream>
@@ -22,4 +23,9 @@ int main(){
     std::cout << "\n** Cifrado Vigenere **" << std::endl;
     Vigenere vg = Vigenere(texto, "key", 1);
     Vigenere vg1 = Vigenere("RSJK QSXHM", "key", 2);
+
+    std::cout << "\n** Cifrado Feistel **" << std::endl;
+    Feistel ft = Feistel(texto, 101);
+    std::cout << "Resultado encriptacion: ";
+    ft.encriptar();
 }
